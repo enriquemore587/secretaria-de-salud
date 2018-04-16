@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Folder>
+	<name>Municipios de M�xico</name>
+	<open>1</open>
+	<Document>
+		<name>Distrito Federal</name>
+		<Style id="shp2kml111200100115031_copy58">
+		  <LineStyle>
+		 <color>7faa0aa0</color>
+		 <width>2</width>
+		 </LineStyle>
+		 <PolyStyle>
+		 <color>aaaaaaaa</color>
+		 </PolyStyle>
+ 		</Style>
+		<StyleMap id="shp2kml1001000_copy0">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#shp2kml1001000_copy1</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#shp2kml1001000_copy2</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="shp2kml111200100115031_copy58p">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#shp2kml111200100115031_copy59</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#shp2kml111200100115031_copy60</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="shp2kml111200100115031_copy137">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#shp2kml111200100115031_copy147</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#shp2kml111200100115031_copy157</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id="shp2kml111200100115031_copy157">
+			<IconStyle>
+				<scale>0.5</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/shapes/open-diamond.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.6</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text>$[description]</text>
+			</BalloonStyle>
+			<LineStyle>
+				<color>ffff0000</color>
+			</LineStyle>
+			<PolyStyle>
+				<color>7fffca95</color>
+				<colorMode>random</colorMode>
+			</PolyStyle>
+		</Style>
+		<Style id="shp2kml111200100115031_copy60">
+			<IconStyle>
+				<scale>0.5</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/shapes/open-diamond.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.6</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text>$[description]</text>
+			</BalloonStyle>
+			<LineStyle>
+				<color>ffff0000</color>
+			</LineStyle>
+			<PolyStyle>
+				<color>7f00ffff</color>
+			</PolyStyle>
+		</Style>
+		<Style id="shp2kml1001000_copy2">
+			<IconStyle>
+				<scale>0.8</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pal4/icon57.png</href>
+				</Icon>
+			</IconStyle>
+			<BalloonStyle>
+				<text>$[description]</text>
+			</BalloonStyle>
+			<LineStyle>
+				<color>ffff0000</color>
+			</LineStyle>
+			<PolyStyle>
+				<color>ffffca95</color>
+			</PolyStyle>
+		</Style>
+		<Style id="shp2kml111200100115031_copy147">
+			<IconStyle>
+				<scale>0.5</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/shapes/open-diamond.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.6</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text>$[description]</text>
+			</BalloonStyle>
+			<LineStyle>
+				<color>ffff0000</color>
+			</LineStyle>
+			<PolyStyle>
+				<color>7fffca95</color>
+				<colorMode>random</colorMode>
+			</PolyStyle>
+		</Style>
+		<Style id="shp2kml111200100115031_copy59">
+			<IconStyle>
+				<scale>0.5</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/shapes/open-diamond.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.6</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text>$[description]</text>
+			</BalloonStyle>
+			<LineStyle>
+				<color>ffff0000</color>
+			</LineStyle>
+			<PolyStyle>
+				<color>7f00ffff</color>
+			</PolyStyle>
+		</Style>
+		<Style id="shp2kml1001000_copy1">
+			<IconStyle>
+				<scale>0.8</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pal4/icon57.png</href>
+				</Icon>
+			</IconStyle>
+			<BalloonStyle>
+				<text>$[description]</text>
+			</BalloonStyle>
+			<LineStyle>
+				<color>ffff0000</color>
+			</LineStyle>
+			<PolyStyle>
+				<color>ffffca95</color>
+			</PolyStyle>
+		</Style>
+		<Folder>
+			<name>Pol�gonos</name>
+			<Style id="shp2kml">
+				<IconStyle>
+					<color>ffffffff</color>
+					<scale>1</scale>
+					<Icon>
+						<href>http://maps.google.com/mapfiles/kml/pal3/icon7.png</href>
+					</Icon>
+				</IconStyle>
+				<LabelStyle>
+					<scale>0</scale>
+				</LabelStyle>
+				<BalloonStyle>
+					<text>$[description]</text>
+					<textColor>ff000000</textColor>
+					<color>ffbae3eb</color>
+					<displayMode>default</displayMode>
+				</BalloonStyle>
+				<LineStyle>
+					<color>ffff0000</color>
+					<width>1</width>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffca95</color>
+				</PolyStyle>
+			</Style>
+			<Placemark>
+				<name>GUSTAVO A. MADERO (D-F)</name>
+				<snippet></snippet>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[Municipios<br><table border=0 cellpadding=2 cellspacing=2  width=250 style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr bgcolor="#F4F1E4"><td bgcolor="#f4eed3" align="right"><b>NOMBRE</b></td><td>GUSTAVO A. MADERO (D-F)</td></tr></table>]]></description>
+				<styleUrl>#shp2kml111200100115031_copy58</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+-99.12247288500001,19.5960870997,0 -99.11731203610002,19.5935962079,0 -99.1186061526,19.5889153899,0 -99.1091667959,19.5679939315,0 -99.1091575228,19.5679801569,0 -99.1299309197,19.5405272946,0 -99.12823021310001,19.5299702232,0 -99.1193851885,19.5177395735,0 -99.11369830500001,19.5149486706,0 -99.1062006289,19.5137164273,0 -99.09870933850003,19.5171571234,0 -99.09075231580002,19.5136943617,0 -99.06393263970001,19.5022813973,0 -99.0675271922,19.4928819596,0 -99.05049482699999,19.4528553725,0 -99.06117462270001,19.4467752792,0 -99.0813856834,19.4516349112,0 -99.0892058562,19.4474084806,0 -99.09552832510001,19.4534212027,0 -99.10769022390001,19.4530859682,0 -99.12132754770001,19.4607569083,0 -99.1422847202,19.4676100137,0 -99.15712612280002,19.5067923691,0 -99.1628857892,19.521796168,0 -99.175080486,19.5275728742,0 -99.17108792099999,19.5310932741,0 -99.18033715350001,19.5364885593,0 -99.15903018530001,19.5306945633,0 -99.1556148704,19.5363217234,0 -99.1579754949,19.5386774426,0 -99.15098137290002,19.5485598172,0 -99.16035571540002,19.553013649,0 -99.1582779307,19.5619068951,0 -99.1493484761,19.565921808,0 -99.14622182150001,19.5709447037,0 -99.1368756987,19.5857010458,0 -99.12247288500001,19.5960870997,0 </coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>AZCAPOTZALCO (D-F)</name>
+				<snippet></snippet>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[Municipios<br><table border=0 cellpadding=2 cellspacing=2  width=250 style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr bgcolor="#F4F1E4"><td bgcolor="#f4eed3" align="right"><b>NOMBRE</b></td><td>AZCAPOTZALCO (D-F)</td></tr></table>]]></description>
+				<styleUrl>#shp2kml111200100115031_copy58</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+-99.2119689214,19.5072069546,0 -99.2099260378,19.5150540165,0 -99.20488711290003,19.5188484341,0 -99.17812860410001,19.5100109338,0 -99.17375523379999,19.512091972,0 -99.15712612280002,19.5067923691,0 -99.1422847202,19.4676100137,0 -99.1483668976,19.4637331494,0 -99.16216748230002,19.4613642326,0 -99.1655025613,19.4595159022,0 -99.1901918599,19.4620149369,0 -99.19178840330001,19.4713153675,0 -99.20684235770001,19.4749709135,0 -99.2209135831,19.47858212830001,0 -99.2119689214,19.5072069546,0 </coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>MIGUEL HIDALGO (D-F)</name>
+				<snippet></snippet>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[Municipios<br><table border=0 cellpadding=2 cellspacing=2  width=250 style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr bgcolor="#F4F1E4"><td bgcolor="#f4eed3" align="right"><b>NOMBRE</b></td><td>MIGUEL HIDALGO (D-F)</td></tr></table>]]></description>
+				<styleUrl>#shp2kml111200100115031_copy58</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+-99.20684235770001,19.4749709135,0 -99.19178840330001,19.4713153675,0 -99.1901918599,19.4620149369,0 -99.1655025613,19.4595159022,0 -99.16216748230002,19.4613642326,0 -99.1829271182,19.4128078307,0 -99.18205868699999,19.4095105086,0 -99.16941820010001,19.4036133018,0 -99.1876563065,19.3983358317,0 -99.1906886285,19.4009184097,0 -99.19545650720001,19.4050511422,0 -99.2339164408,19.3954325572,0 -99.2451582672,19.3883102906,0 -99.24831272780001,19.3957975151,0 -99.25624948550001,19.3943907235,0 -99.25645068860001,19.4039116039,0 -99.25025459500003,19.4113775178,0 -99.2383022248,19.4157523501,0 -99.22273912110001,19.4309218603,0 -99.22782062380001,19.4418532089,0 -99.2180865933,19.4478668928,0 -99.2195598128,19.4567363064,0 -99.21453206720001,19.4605694971,0 -99.2118230801,19.4711370448,0 -99.20684235770001,19.4749709135,0 </coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>CUAUHTEMOC (D-F)</name>
+				<snippet></snippet>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[Municipios<br><table border=0 cellpadding=2 cellspacing=2  width=250 style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr bgcolor="#F4F1E4"><td bgcolor="#f4eed3" align="right"><b>NOMBRE</b></td><td>CUAUHTEMOC (D-F)</td></tr></table>]]></description>
+				<styleUrl>#shp2kml111200100115031_copy58</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+-99.1422847202,19.4676100137,0 -99.12132754770001,19.4607569083,0 -99.12493427640003,19.4509919959,0 -99.1262374057,19.4093266215,0 -99.13816278340001,19.40731449000001,0 -99.16941820010001,19.4036133018,0 -99.18205868699999,19.4095105086,0 -99.1829271182,19.4128078307,0 -99.16216748230002,19.4613642326,0 -99.1483668976,19.4637331494,0 -99.1422847202,19.4676100137,0 </coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>VENUSTIANO CARRANZA (D-F)</name>
+				<snippet></snippet>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[Municipios<br><table border=0 cellpadding=2 cellspacing=2  width=250 style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr bgcolor="#F4F1E4"><td bgcolor="#f4eed3" align="right"><b>NOMBRE</b></td><td>VENUSTIANO CARRANZA (D-F)</td></tr></table>]]></description>
+				<styleUrl>#shp2kml111200100115031_copy58</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+-99.12132754770001,19.4607569083,0 -99.10769022390001,19.4530859682,0 -99.09552832510001,19.4534212027,0 -99.0892058562,19.4474084806,0 -99.0813856834,19.4516349112,0 -99.06117462270001,19.4467752792,0 -99.05049482699999,19.4528553725,0 -99.04716940740001,19.4453125188,0 -99.05458313760001,19.4284574829,0 -99.06866191740001,19.4237185633,0 -99.082821217,19.4102055723,0 -99.10117390200001,19.41282424,0 -99.1262374057,19.4093266215,0 -99.12493427640003,19.4509919959,0 -99.12132754770001,19.4607569083,0 </coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>IZTACALCO (D-F)</name>
+				<snippet></snippet>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[Municipios<br><table border=0 cellpadding=2 cellspacing=2  width=250 style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr bgcolor="#F4F1E4"><td bgcolor="#f4eed3" align="right"><b>NOMBRE</b></td><td>IZTACALCO (D-F)</td></tr></table>]]></description>
+				<styleUrl>#shp2kml111200100115031_copy58</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+-99.1262374057,19.4093266215,0 -99.10117390200001,19.41282424,0 -99.082821217,19.4102055723,0 -99.06866191740001,19.4237185633,0 -99.05458313760001,19.4284574829,0 -99.0578984504,19.404403258,0 -99.05967518990001,19.3856858793,0 -99.0739667972,19.3895618181,0 -99.0780451081,19.3944985155,0 -99.08039802320003,19.3916544117,0 -99.0890009041,19.392242803,0 -99.0951208421,19.3833408079,0 -99.1216837459,19.3846041714,0 -99.12293660760001,19.3786025153,0 -99.1354631562,19.3801483544,0 -99.1305967127,19.4000340767,0 -99.13728558379999,19.4035748647,0 -99.13816278340001,19.40731449000001,0 -99.1262374057,19.4093266215,0 </coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>BENITO JUAREZ (D-F)</name>
+				<snippet></snippet>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[Municipios<br><table border=0 cellpadding=2 cellspacing=2  width=250 style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr bgcolor="#F4F1E4"><td bgcolor="#f4eed3" align="right"><b>NOMBRE</b></td><td>BENITO JUAREZ (D-F)</td></tr></table>]]></description>
+				<styleUrl>#shp2kml111200100115031_copy58</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+-99.16941820010001,19.4036133018,0 -99.13816278340001,19.40731449000001,0 -99.13728558379999,19.4035748647,0 -99.1305967127,19.4000340767,0 -99.1354631562,19.3801483544,0 -99.1418096745,19.3620309649,0 -99.170449678,19.3628693743,0 -99.17739008660001,19.3676048422,0 -99.1859491869,19.3656128265,0 -99.19177582330001,19.3702069629,0 -99.1906886285,19.4009184097,0 -99.1876563065,19.3983358317,0 -99.16941820010001,19.4036133018,0 </coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>CUAJIMALPA DE MORELOS (D-F)</name>
+				<snippet></snippet>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[Municipios<br><table border=0 cellpadding=2 cellspacing=2  width=250 style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr bgcolor="#F4F1E4"><td bgcolor="#f4eed3" align="right"><b>NOMBRE</b></td><td>CUAJIMALPA DE MORELOS (D-F)</td></tr></table>]]></description>
+				<styleUrl>#shp2kml111200100115031_copy58</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+-99.25645068860001,19.4039116039,0 -99.25624948550001,19.3943907235,0 -99.24831272780001,19.3957975151,0 -99.2451582672,19.3883102906,0 -99.26592995090002,19.374973145,0 -99.2663137102,19.3667365367,0 -99.2617283713,19.36155356880001,0 -99.26520220930001,19.3559058849,0 -99.26099243490002,19.3520189864,0 -99.26161420050002,19.3481350985,0 -99.29112623770001,19.3332029239,0 -99.2931184134,19.3231984603,0 -99.29547036200003,19.3210809321,0 -99.30093044030001,19.324497231,0 -99.30205225630002,19.3130793366,0 -99.31320903960001,19.3068463389,0 -99.31581747070003,19.2871894262,0 -99.3245029894,19.2636522757,0 -99.32207404450001,19.2423941743,0 -99.32306292830002,19.2362038318,0 -99.33947293490002,19.244045089,0 -99.3419493996,19.2447521822,0 -99.3420301781,19.2543802066,0 -99.3378498914,19.2677243203,0 -99.33937284860001,19.2713692222,0 -99.34866638420002,19.2778480922,0 -99.36433596649999,19.2818381954,0 -99.354495324,19.2972624189,0 -99.35026193909999,19.2980248555,0 -99.35641273269999,19.3106976407,0 -99.33232243810001,19.3356227593,0 -99.32676224310001,19.3490478713,0 -99.3285669242,19.356400594,0 -99.32327624050002,19.3618228928,0 -99.31860469770001,19.3619287909,0 -99.31949772640002,19.3685179222,0 -99.3032191767,19.3814659309,0 -99.30070791570002,19.3804697489,0 -99.298818791,19.3711594848,0 -99.28531133750002,19.3795752595,0 -99.2827255484,19.3847612657,0 -99.2766285047,19.3782125116,0 -99.272641112,19.3933549324,0 -99.2693191164,19.3937418218,0 -99.2652954169,19.4020176147,0 -99.260446524,19.4032787781,0 -99.25745454190002,19.4081671546,0 -99.25645068860001,19.4039116039,0 </coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>IZTAPALAPA (D-F)</name>
+				<snippet></snippet>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[Municipios<br><table border=0 cellpadding=2 cellspacing=2  width=250 style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr bgcolor="#F4F1E4"><td bgcolor="#f4eed3" align="right"><b>NOMBRE</b></td><td>IZTAPALAPA (D-F)</td></tr></table>]]></description>
+				<styleUrl>#shp2kml111200100115031_copy58</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+-99.1354631562,19.3801483544,0 -99.12293660760001,19.3786025153,0 -99.1216837459,19.3846041714,0 -99.0951208421,19.3833408079,0 -99.0890009041,19.392242803,0 -99.08039802320003,19.3916544117,0 -99.0780451081,19.3944985155,0 -99.0739667972,19.3895618181,0 -99.05967518990001,19.3856858793,0 -99.0578984504,19.404403258,0 -99.01860563779999,19.3865667256,0 -98.99016727830004,19.3697961753,0 -98.99287521010001,19.3604049218,0 -98.96843715350002,19.3358240233,0 -98.9631629172,19.33125502,0 -98.96754012,19.3288905115,0 -98.9914660331,19.3292948694,0 -99.0336320641,19.3237277449,0 -99.044425214,19.3172736548,0 -99.0531086795,19.3161096297,0 -99.0585739611,19.3096465712,0 -99.06328538510002,19.3089490025,0 -99.06132130420004,19.2985856754,0 -99.0681564092,19.2909457105,0 -99.08903499820001,19.3105152363,0 -99.0985038858,19.3236340435,0 -99.11171794100001,19.3376256264,0 -99.12185250269999,19.3547077175,0 -99.12308622640002,19.362358233,0 -99.1418096745,19.3620309649,0 -99.1354631562,19.3801483544,0 </coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>ALVARO OBREGON (D-F)</name>
+				<snippet></snippet>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[Municipios<br><table border=0 cellpadding=2 cellspacing=2  width=250 style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr bgcolor="#F4F1E4"><td bgcolor="#f4eed3" align="right"><b>NOMBRE</b></td><td>ALVARO OBREGON (D-F)</td></tr></table>]]></description>
+				<styleUrl>#shp2kml111200100115031_copy58</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+-99.2451582672,19.3883102906,0 -99.2339164408,19.3954325572,0 -99.19545650720001,19.4050511422,0 -99.1906886285,19.4009184097,0 -99.19177582330001,19.3702069629,0 -99.1859491869,19.3656128265,0 -99.17739008660001,19.3676048422,0 -99.170449678,19.3628693743,0 -99.19131814330001,19.3407822635,0 -99.19838359290002,19.3389048363,0 -99.19801167270003,19.3356102018,0 -99.1950352746,19.3359609984,0 -99.1933159333,19.3271309567,0 -99.203370064,19.3116023815,0 -99.1980402257,19.3084931264,0 -99.2221418358,19.3156007773,0 -99.20842018170001,19.3406798023,0 -99.23124276680001,19.3334015637,0 -99.23782223680001,19.3281101959,0 -99.2478658233,19.3304717939,0 -99.25529989400002,19.3287117251,0 -99.26361877740001,19.3184748935,0 -99.2706845603,19.3169499343,0 -99.2700748601,19.3015293735,0 -99.2730556244,19.2908204518,0 -99.2999600231,19.2627023285,0 -99.31297510500002,19.2588227413,0 -99.32207404450001,19.2423941743,0 -99.3245029894,19.2636522757,0 -99.31581747070003,19.2871894262,0 -99.31320903960001,19.3068463389,0 -99.30205225630002,19.3130793366,0 -99.30093044030001,19.324497231,0 -99.29547036200003,19.3210809321,0 -99.2931184134,19.3231984603,0 -99.29112623770001,19.3332029239,0 -99.26161420050002,19.3481350985,0 -99.26099243490002,19.3520189864,0 -99.26520220930001,19.3559058849,0 -99.2617283713,19.36155356880001,0 -99.2663137102,19.3667365367,0 -99.26592995090002,19.374973145,0 -99.2451582672,19.3883102906,0 </coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>COYOACAN (D-F)</name>
+				<snippet></snippet>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[Municipios<br><table border=0 cellpadding=2 cellspacing=2  width=250 style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr bgcolor="#F4F1E4"><td bgcolor="#f4eed3" align="right"><b>NOMBRE</b></td><td>COYOACAN (D-F)</td></tr></table>]]></description>
+				<styleUrl>#shp2kml111200100115031_copy58</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+-99.170449678,19.3628693743,0 -99.1418096745,19.3620309649,0 -99.12308622640002,19.362358233,0 -99.12185250269999,19.3547077175,0 -99.11171794100001,19.3376256264,0 -99.0985038858,19.3236340435,0 -99.0998603247,19.3041690214,0 -99.11040802550002,19.3032547894,0 -99.13153488099999,19.312688156,0 -99.14238922929999,19.301649247,0 -99.1478454649,19.303657106,0 -99.1524332548,19.3006025733,0 -99.16643102730001,19.3059164853,0 -99.1944506477,19.3061816101,0 -99.1980402257,19.3084931264,0 -99.203370064,19.3116023815,0 -99.1933159333,19.3271309567,0 -99.1950352746,19.3359609984,0 -99.19801167270003,19.3356102018,0 -99.19838359290002,19.3389048363,0 -99.19131814330001,19.3407822635,0 -99.170449678,19.3628693743,0 </coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>MAGDALENA CONTRERAS, LA (D-F)</name>
+				<snippet></snippet>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[Municipios<br><table border=0 cellpadding=2 cellspacing=2  width=250 style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr bgcolor="#F4F1E4"><td bgcolor="#f4eed3" align="right"><b>NOMBRE</b></td><td>MAGDALENA CONTRERAS, LA (D-F)</td></tr></table>]]></description>
+				<styleUrl>#shp2kml111200100115031_copy58</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+-99.32207404450001,19.2423941743,0 -99.31297510500002,19.2588227413,0 -99.2999600231,19.2627023285,0 -99.2730556244,19.2908204518,0 -99.2700748601,19.3015293735,0 -99.2706845603,19.3169499343,0 -99.26361877740001,19.3184748935,0 -99.25529989400002,19.3287117251,0 -99.2478658233,19.3304717939,0 -99.23782223680001,19.3281101959,0 -99.23124276680001,19.3334015637,0 -99.20842018170001,19.3406798023,0 -99.2221418358,19.3156007773,0 -99.24143916010002,19.2939780122,0 -99.23971339400001,19.2900926826,0 -99.2426875318,19.2836212434,0 -99.2450629571,19.2556103827,0 -99.25264184910003,19.2387822676,0 -99.2723515575,19.2249065937,0 -99.2781743175,19.2170224682,0 -99.29366345800001,19.2176181726,0 -99.31577771520001,19.2291881397,0 -99.31647493800001,19.2330519209,0 -99.32306292830002,19.2362038318,0 -99.32207404450001,19.2423941743,0 </coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>TLAHUAC (D-F)</name>
+				<snippet></snippet>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[Municipios<br><table border=0 cellpadding=2 cellspacing=2  width=250 style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr bgcolor="#F4F1E4"><td bgcolor="#f4eed3" align="right"><b>NOMBRE</b></td><td>TLAHUAC (D-F)</td></tr></table>]]></description>
+				<styleUrl>#shp2kml111200100115031_copy58</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+-99.0681564092,19.2909457105,0 -99.06132130420004,19.2985856754,0 -99.06328538510002,19.3089490025,0 -99.0585739611,19.3096465712,0 -99.0531086795,19.3161096297,0 -99.044425214,19.3172736548,0 -99.0336320641,19.3237277449,0 -98.9914660331,19.3292948694,0 -98.96754012,19.3288905115,0 -98.9631629172,19.33125502,0 -98.9570249536,19.3264737214,0 -98.96211145350003,19.3196664974,0 -98.96397634180003,19.3095909906,0 -98.96671848699999,19.3086146693,0 -98.9749656474,19.2557926965,0 -98.96580560290001,19.2536165059,0 -98.9684138002,19.2357511532,0 -98.9445294619,19.2277785637,0 -98.94033521740003,19.2263394109,0 -98.94277344990002,19.2192356807,0 -98.9508221535,19.2215065109,0 -98.9674106105,19.2146468177,0 -98.96663454860001,19.2014114035,0 -98.97392063880001,19.2018985957,0 -98.97378474980002,19.2059015024,0 -98.9794725193,19.2096803003,0 -98.97598574980003,19.2194416669,0 -98.9861006491,19.2284353824,0 -99.0278019082,19.22837875880001,0 -99.02463690100001,19.2370782666,0 -99.01421071350001,19.2457691983,0 -99.0103758234,19.242229651,0 -99.0085117842,19.2445810756,0 -99.0033876209,19.2634036744,0 -99.00908840530001,19.2654167723,0 -99.01095415200003,19.2621227612,0 -99.03002101360001,19.2695764832,0 -99.0369596022,19.2779387284,0 -99.0589870837,19.2850205105,0 -99.0681564092,19.2909457105,0 </coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>XOCHIMILCO (D-F)</name>
+				<snippet></snippet>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[Municipios<br><table border=0 cellpadding=2 cellspacing=2  width=250 style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr bgcolor="#F4F1E4"><td bgcolor="#f4eed3" align="right"><b>NOMBRE</b></td><td>XOCHIMILCO (D-F)</td></tr></table>]]></description>
+				<styleUrl>#shp2kml111200100115031_copy58</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+-99.0998603247,19.3041690214,0 -99.0985038858,19.3236340435,0 -99.08903499820001,19.3105152363,0 -99.0681564092,19.2909457105,0 -99.0589870837,19.2850205105,0 -99.0369596022,19.2779387284,0 -99.03002101360001,19.2695764832,0 -99.01095415200003,19.2621227612,0 -99.00908840530001,19.2654167723,0 -99.0033876209,19.2634036744,0 -99.0085117842,19.2445810756,0 -99.0103758234,19.242229651,0 -99.01421071350001,19.2457691983,0 -99.02463690100001,19.2370782666,0 -99.0278019082,19.22837875880001,0 -99.0884941802,19.2154122643,0 -99.09307153570001,19.2168319556,0 -99.13069981830003,19.1572084415,0 -99.1313095989,19.1654503462,0 -99.1270854039,19.1763899339,0 -99.1300496848,19.182397362,0 -99.125574461,19.1898072203,0 -99.1280255149,19.2080549709,0 -99.14041093080002,19.212427452,0 -99.14908182089999,19.2119648549,0 -99.15762040129999,19.2192747882,0 -99.1555068358,19.2259822691,0 -99.1572189624,19.242816215,0 -99.1536113217,19.2506967478,0 -99.14407274600002,19.2500966452,0 -99.1386083921,19.2577404069,0 -99.13835703709999,19.2633908867,0 -99.14268664319999,19.2681033533,0 -99.13977638670001,19.2864125886,0 -99.13274462660002,19.2853943934,0 -99.12963839040002,19.2888024944,0 -99.10732073480001,19.2966592855,0 -99.1004986313,19.2997084451,0 -99.0998603247,19.3041690214,0 </coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>TLALPAN (D-F)</name>
+				<snippet></snippet>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[Municipios<br><table border=0 cellpadding=2 cellspacing=2  width=250 style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr bgcolor="#F4F1E4"><td bgcolor="#f4eed3" align="right"><b>NOMBRE</b></td><td>TLALPAN (D-F)</td></tr></table>]]></description>
+				<styleUrl>#shp2kml111200100115031_copy58</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+-99.2221418358,19.3156007773,0 -99.1980402257,19.3084931264,0 -99.1944506477,19.3061816101,0 -99.16643102730001,19.3059164853,0 -99.1524332548,19.3006025733,0 -99.1478454649,19.303657106,0 -99.14238922929999,19.301649247,0 -99.13153488099999,19.312688156,0 -99.11040802550002,19.3032547894,0 -99.0998603247,19.3041690214,0 -99.1004986313,19.2997084451,0 -99.10732073480001,19.2966592855,0 -99.12963839040002,19.2888024944,0 -99.13274462660002,19.2853943934,0 -99.13977638670001,19.2864125886,0 -99.14268664319999,19.2681033533,0 -99.13835703709999,19.2633908867,0 -99.1386083921,19.2577404069,0 -99.14407274600002,19.2500966452,0 -99.1536113217,19.2506967478,0 -99.1572189624,19.242816215,0 -99.1555068358,19.2259822691,0 -99.15762040129999,19.2192747882,0 -99.14908182089999,19.2119648549,0 -99.14041093080002,19.212427452,0 -99.1280255149,19.2080549709,0 -99.125574461,19.1898072203,0 -99.1300496848,19.182397362,0 -99.1270854039,19.1763899339,0 -99.1313095989,19.1654503462,0 -99.13069981830003,19.1572084415,0 -99.13392400550004,19.154858795,0 -99.13850661230001,19.1568661654,0 -99.14233570419999,19.1639338613,0 -99.1484020809,19.1647658524,0 -99.1525270045,19.1378143469,0 -99.1617123784,19.1205223454,0 -99.13220644499999,19.0927986344,0 -99.1332629999,19.0905782015,0 -99.22577015660002,19.0997513945,0 -99.27936205170002,19.1349189076,0 -99.30266877950001,19.1937952809,0 -99.30705600180002,19.2171443858,0 -99.3152438262,19.2247789864,0 -99.31577771520001,19.2291881397,0 -99.29366345800001,19.2176181726,0 -99.2781743175,19.2170224682,0 -99.2723515575,19.2249065937,0 -99.25264184910003,19.2387822676,0 -99.2450629571,19.2556103827,0 -99.2426875318,19.2836212434,0 -99.23971339400001,19.2900926826,0 -99.24143916010002,19.2939780122,0 -99.2221418358,19.3156007773,0 </coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>MILPA ALTA (D-F)</name>
+				<snippet></snippet>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[Municipios<br><table border=0 cellpadding=2 cellspacing=2  width=250 style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr bgcolor="#F4F1E4"><td bgcolor="#f4eed3" align="right"><b>NOMBRE</b></td><td>MILPA ALTA (D-F)</td></tr></table>]]></description>
+				<styleUrl>#shp2kml111200100115031_copy58</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+-99.0278019082,19.22837875880001,0 -98.9861006491,19.2284353824,0 -98.97598574980003,19.2194416669,0 -98.9794725193,19.2096803003,0 -98.97378474980002,19.2059015024,0 -98.97392063880001,19.2018985957,0 -98.96663454860001,19.2014114035,0 -98.96502326800001,19.1888618504,0 -98.95577867599999,19.1799501687,0 -98.95235569840001,19.1721787584,0 -98.96688161500001,19.168196283,0 -98.9616338821,19.1622918246,0 -98.95369109990001,19.1532431283,0 -98.9680579186,19.1486004926,0 -98.95770865430001,19.1246746024,0 -98.96117551520001,19.0998156363,0 -98.96769653920001,19.0872146507,0 -98.9722012057,19.0843323356,0 -98.9788501024,19.0784071946,0 -98.9848927118,19.083152877,0 -99.02842566130002,19.0893447062,0 -99.0433998492,19.0795130656,0 -99.059918807,19.0526008036,0 -99.1332629999,19.0905782015,0 -99.13220644499999,19.0927986344,0 -99.1617123784,19.1205223454,0 -99.1525270045,19.1378143469,0 -99.1484020809,19.1647658524,0 -99.14233570419999,19.1639338613,0 -99.13850661230001,19.1568661654,0 -99.13392400550004,19.154858795,0 -99.13069981830003,19.1572084415,0 -99.09307153570001,19.2168319556,0 -99.0884941802,19.2154122643,0 -99.0278019082,19.22837875880001,0 </coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+		</Folder>
+	</Document>
+</Folder>

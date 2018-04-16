@@ -1,0 +1,14 @@
+#lista {overflow:auto; height:300px; width:40%;}/**/
+#lista table {width:100%; background-color:#00CED1; background: transparent;}
+    .trans{
+      background-color:#ffffff;
+      color:#CC0000;
+      position:absolute;
+      text-align:center;
+      top:50px;
+      /*left:40px;*/
+      padding:65px;
+      font-size:25px;
+      font-weight:bold;
+      width:65%;
+    }

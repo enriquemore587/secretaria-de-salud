@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DICCIONARIOS javascript</title>
+</head>
+<body >
+<SCRIPT>
+	var a1 = ['Hospital 1','Hospital 1','Hospital 1','Hospital 1','Hospital 2','Hospital 2','Hospital 2','Hospital 2','Hospital 3','Hospital 3','Hospital 3','Hospital 3','Hospital 4','Hospital 4','Hospital 4','Hospital 5','Hospital 5','Hospital 5','Hospital 6','Hospital 7','Hospital 8','Hospital 9','Hospital 10'];
+	var a2 = ['enfermedad 1','enfermedad 1','enfermedad 1','enfermedad 2','enfermedad 2','enfermedad 2','enfermedad 2','enfermedad 2','enfermedad 3','enfermedad 3','enfermedad 4','enfermedad 4','enfermedad 4','enfermedad 5','enfermedad 5','enfermedad 5','enfermedad 2','enfermedad 1','enfermedad 1','enfermedad 1','enfermedad 1','enfermedad 1','enfermedad 1'];
+	var a3 = ['H','J','M','H','M','M','H','M','H','M','H','M','M','H','M','H','M','M','M','M','M','M','M'];
+	var a4 = [1,2,3,6,5,4,2,1,5,3,6,5,12,2,45,3,1,8,8,4,1,4,5];
+
+
+	function createDescriptionChart(ar1, ar2, ar3, ar4){
+        var diccionarioNames={};
+        ar3.forEach(function (p1, p2, p3) {
+            var key = p1;
+            diccionarioNames[key] = p1;
+        });
+        //console.log(diccionarioNames);
+        var diccionario = {};
+        ar1.forEach(function (p1, p2, p3) {
+            var k1 = p1;
+            if (diccionario[k1] == undefined){
+                var dic = {};
+                var key = ar2[p2];
+                var key2 = ar3[p2];
+
+                var subDic = {}
+                subDic[key2] = parseInt(ar4[p2]);
+                dic[key] = subDic;
+
+                diccionario[k1] = dic;
+            }else{
+                var k2 = ar2[p2], k3 = ar3[p2];
+                if(diccionario[k1][k2] != undefined){
+                    if(diccionario[k1][k2][k3] == undefined){
+                        diccionario[k1][k2][k3] = parseInt(ar4[p2]);
+                    }else {
+                        diccionario[k1][k2][k3] += parseInt(ar4[p2]);
+                    }
+                }else{
+                    var subDic = {}
+                    subDic[k3] = parseInt(ar4[p2]);
+                    diccionario[k1][k2] = subDic;
+                }
+            }
+        });
+        return {'data': diccionario, 'names': diccionarioNames};
+    }
+    console.log(createDescriptionChart(a1,a2,a3,a4));
+    //console.log(diccionario['Hospital 1']['enfermedad 1']['M']);
+    //console.log(diccionario);
+    /*
+	var key1 = 'nombre', key2 = 'Apellido';
+    diccionario[key1] = 'Jose';
+    diccionario[key2] = 'Vergara';
+	console.log(diccionario);
+	console.log(Object.keys(diccionario));
+	for(var key in diccionario){
+        console.log(key);
+	    console.log(diccionario[key]);
+	}*/
+</SCRIPT>
+</body>
+</html>

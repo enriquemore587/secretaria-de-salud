@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CDMX</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="shortcut icon" href="tese.ico" />
+    <!-- inicio Bootstrap -->
+    <!-- Meta viewport para Bootstrap  -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- inicio Bootstrap -->
+
+    <!-- inicio mapa grande-->
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.2.0/css/ol.css" type="text/css">
+    <!-- fin de mapa grande -->
+    <!--   begin  OL3  -->
+    <!--<link rel="stylesheet" href="https://openlayers.org/en/v3.20.1/css/ol.css" type="text/css">-->
+    <!--   End  OL3  -->
+
+    <!-- start My css -->
+    <link rel="stylesheet" href="../css/estilos_more.css">
+    <!-- close My css -->
+
+
+    <style type="text/css">
+      /* inicio para mapa de tamaño de pantalla completa !*/
+      map:-moz-full-screen {
+        height: 100%;
+      }
+      .map:-webkit-full-screen {
+        height: 100%;
+      }
+      .map:-ms-fullscreen {
+        height: 100%;
+      }
+      .map:fullscreen {
+        height: 100%;
+      }/* fin para mapa de tamaño de pantalla completa !*/
+      /*#container {
+        min-width: 300px;
+        max-width: 600px;
+        margin: 0 auto;
+      }*/
+       .i {
+        height: 80%  !important;
+        overflow: scroll;
+        }​
+    </style>
+
+
+    <script src="../recursos/pace.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../templates/circulo.css">
+  </head>
+  <body>
+  <!--<input type="button" onclick="deleteDelegacion('estados');" value="elimina">-->
+    <div class="container-fluid" style="background: lightsteelblue;">
+      <!--<img src="tese.ico" class="rounded float-right" style="width: 50px;">-->
+    <h2><img src="tese.ico" class="rounded float-right" style="width: 50px;">Servicios de Salud en la CDMX (2009-2012)</h2>
+    </div>
+    <div id="container-fluid">
+      <div class="container-fluid">
+        <div class="container-fluid row content">
+          <!-- inicia Seccion de Filtros-->
+          <div class=" row col-xs-12 col-sm-12 col-md-4 col-lg-4 sidenav hidden-xs ">
+            <h2>FILTROS <span  class="statuss"></span></h2>
+            <ul class="nav nav-pills nav-stacked">
+              <li class="active"><a>SERVICIOS</a></li>
+              <div>
+                <small class="form-text text-muted">Fecha</small>
+                <input id="fecha" class="form-control" type="text" name="daterange">
+              </div>
+              <p id="uno">
+                <li>
+                  <small id="helpEgreIngre" class="form-text text-muted">Servicios <SMALL>Egreso o Ingreso</SMALL></small>
+                <!--<center><h4><span class="label label-info">INGRESO / EGRESOS</span></h4></center>-->
+                <select id="select_1" class="form-control" >
+                  <option>TODOS LOS SERVICIOS</option>
+                  <option>SERVICIOS EGRESO</option>
+                  <option>SERVICIOS INGRESO</option>
+                </select>
+              </li>
+              <li>
+                <small id="helpEstancias" class="form-text text-muted">ESTANCIAS   <SMALL>[CORTA / NORMAL]</SMALL></small>
+              <!--<center><h4><span class="label label-info">ESTANCIA CORTA / NORMAL </span></h4></center>-->
+                <select id="select_2" class="form-control">
+                  <option>AMBAS ESTANCIAS</option>
+                  <option>NORMAL</option>
+                  <option>CORTA ESTANCIA</option>
+                </select>
+              </li>
+              <li>
+                <small class="form-text text-muted">SERVICIOS (<SMALL id="helpServicio" >NOMBRES</SMALL>)</small>
+              <!--<center><h4><span class="label label-info">NOMBRES DE LOS SERVICIOS</span></h4></center>-->
+                <select id="lista_servicios" multiple class="form-control">
+                </select>
+              </li>
+              </p>
+              <!--<center><h4><span class="label label-info">AFECCIONES</span></h4></center>-->
+              <li class="active"><a>AFECCIONES</a></li>
+              <small id="fileHelp" class="form-text text-muted">AFECCIONES (<SMALL id="helpafecciones" >NOMBRES</SMALL>)</small>
+              <select id="lista_afecciones" multiple class="form-control">
+              </select><br>
+
+              <div class=" bg-3 text-center">
+                <div id="exTab2">
+                  <ul  class="nav nav-pills">
+                    <li class="active">
+                      <a  class="notroot" href="#verUnidades" data-toggle="tab">UNIDADES</a>
+                    </li>
+                    <li>
+                      <a href="#verDelegaciones" data-toggle="tab">DELEGACIONES</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content clearfix">
+                    <div class="notroot tab-pane active" id="verUnidades">
+                      <small class="form-text text-muted">UNIDADES <SMALL id="helpUnidades" >NOMBRES</SMALL></small>
+                      <select id="lista_unidades" multiple class="form-control">
+                      </select>
+                    </div>
+                    <div class="tab-pane" id="verDelegaciones">
+                      <small class="form-text text-muted">DELEGACIONES <SMALL id="helpDelegaciones" >NOMBRES</SMALL></small>
+                      <select id="DELEGACIONES" multiple class="form-control">
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+            <br>
+          </div>
+          <!-- Finaliza Seccion de Filtros-->
+          <br>
+          <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 ">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="container-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid row">
+              <div class="col-md-12">
+                <div class="">    <!-- div de la tabla -->
+                  <ul class="list-group">
+                    <li class="list-group-item active"><center>Resumen<span id="getLayers" class="badge pull-right btn btn-link" style="background: deepskyblue">LIMPIAR</span></center></li>
+                    <li class="list-group-item alert alert-info">
+                      <span style="background: cornflowerblue" id = "Servicios" class="badge">Calculando. . ..</span>
+                      Servicios
+                    </li>
+                    <li class="list-group-item alert alert-info">
+                      <span style="background: cornflowerblue" id="Unidades" class="badge">Calculando. . ..</span>
+                      Unidades
+                    </li>
+                    <li class="list-group-item alert alert-info">
+                      <span style="background: cornflowerblue" id="Afecciones" class="badge">Calculando. . ..</span>
+                      Afecciones
+                    </li>
+                    <li class="list-group-item alert alert-info">
+                      <span style="background: cornflowerblue" id="registros" class="badge">Calculando. . ..</span>
+                      Registros
+                    </li>
+                  </ul>
+                </div>
+                </div>
+              <!--<div class="col-md-7">-->
+                <!--<div id="container" style="height: 300px">-->
+                  <!--<input type="image" src="tese.ico" style="height: 50px; width: 50px;">-->
+
+                <!--</div>-->
+              <!--</div>-->
+            </div>
+            <div id="map" class="map" style="height: 100%; width: 100%"><div id="popup"></div></div><center><a id="export-png" class="btn btn-link">DESCARGAR MAPA</a></center>
+          </div>
+        </div>
+      </div>
+    </div>
+<footer>
+  <h3>José Enrique Vergara Ambríz</h3>
+</footer>
+  <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div id="contenedorModalSM" class="modal-content">
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div id="contenedorModalLG" class="modal-content">
+        <p id="barra"></p>
+
+        <p id="container"></p>
+        <div id="piramide" style="min-width: 410px;  height: 400px; margin: 0 auto"></div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- animacion ol3 -->
+     <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <!--<script src="https://openlayers.org/en/v3.20.1/build/ol.js"></script>-->
+    <script src="https://openlayers.org/en/v4.2.0/build/ol.js"></script>
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/Viglino/OL3-AnimatedCluster/gh-pages/interaction/selectclusterinteraction.js"></script>
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/Viglino/OL3-AnimatedCluster/gh-pages/layer/animatedclusterlayer.js"></script>
+    <!-- fin animacion-->
+
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/treemap.js"></script>
+  <!-- piramide-->
+  <script src="https://code.highcharts.com/modules/funnel.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <!-- end piramide-->
+
+  <!--  Recurso para descargar imagen del mapa-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.3/FileSaver.min.js"></script>
+  <!--  FIN.................Recurso para descargar imagen del mapa-->
+    <script src="../recursos/jquery-3.1.1.min.js"></script>
+    <script src="../recursos/bootstrap.min.js"></script>
+
+    <!-- Fecha -->
+    <script type="text/javascript" src="moment.min.js"></script>
+    <script type="text/javascript" src="daterangepicker.js"></script>
+    <!-- Termina Fecha -->
+
+    <!-- controls -->
+  <link rel="stylesheet" href="../recursos/controlbar.css" type="text/css" />
+  <script type="text/javascript" src="../recursos/controlbar.js"></script>
+  <script type="text/javascript" src="../recursos/buttoncontrol.js"></script>
+  <script type="text/javascript" src="../recursos/togglecontrol.js"></script>
+
+  <!-- filters -->
+  <script type="text/javascript" src="../recursos/filter.js"></script>
+  <script type="text/javascript" src="../recursos/compositefilter.js">
+  </script>
+
+  <script src="jquery.spin.js" type="text/javascript"></script>
+  <link href="jquery.spin.css" rel="stylesheet" type="text/css" />
+  <!-- Mine-->
+  <script src="../recursos/globalVar.js"></script>
+  <script src="../recursos/delegaciones.js"></script>
+  <script src="../recursos/map.js"></script>
+  <script src="../recursos/ubicaciones.js"></script>
+
+
+  <script type="text/javascript" src="barra.js"></script>
+  <script src="../recursos/cuadroDescripcion.js" type="text/javascript"></script>
+  <script src="../recursos/source.js"></script>
+  </body>
+</html>

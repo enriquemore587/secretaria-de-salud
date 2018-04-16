@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+  <title>CDMX</title>
+
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
+    <style type="text/css">
+            ${demo.css}
+    </style>
+    <script type="text/javascript" src="grafica.js"></script>
+</head>
+<body onload="lugares()">
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <header>
+    <div class="container">
+      <h1>UNIDADES DE SALUD</h1>
+      <p class="help-block">CIUDAD DE MÉXICO</p>
+    </div>
+  </header>
+  <div class="container">
+    <section class="main row ">
+    <article id="map" class="col-xs-12 col-sm-8 col-md-7 col-lg-7 ">
+    </article>
+    <div class="col-xs-12 col-sm-4 col-md-5 col-lg-5">      
+        <div class="form-group">
+          <div class="input-group form-inline">
+            <input class="form-control" type="text" name="daterange">              
+            <div for="sexo" class="input-group-addon">SEXO</div>
+            <select id="sexo" class="form-control input-sm">      
+              <option>MASCULINO</option>
+              <option>FEMENINO</option>
+              <option>NO ESPECIFICO</option>
+            </select>
+          </div> 
+        </div>
+      <div class="form-group">
+        <label class="sr-only" for="afec" >AFECCION:</label>
+          <input type="text" class="form-control date" id="afec" placeholder="AFECCION">
+      </div>
+      <p>
+        <!--<button type="button" class="btn btn-primary" onclick="">MOSTRAR TODAS LAS UNIDADES</button><br>-->
+      </p>
+      <p>
+            <h1><button class="btn btn-primary" onclick="buscarHospitales('si') ">GRAFICAR</button></h1>
+      </p>            
+    </div>
+    </section>
+    <div class="row page-header">
+      <div class="color1col-xs-12 col-sm-6   col-md-3">
+        <div class="table-responsive">
+               <table class="table-striped table-bordered table-hover table-condensed">
+                <tr class="success active">
+                  <th><button class="btn btn-info" >NOMBRE</button></th><th><button class="btn btn-info">DIRECCION</button></th>
+                </tr>
+                <tr class="active">
+                  <td>NOMBRE</td><td>DIRECCION</td>
+                </tr>
+                <tr class="active">
+                  <td >NOMBRE</td><td>DIRECCION</td>
+                </tr>
+                <tr class="active">
+                  <td >NOMBRE</td><td>DIRECCION</td>
+                </tr>
+                <tr class="active">
+                  <td >NOMBRE</td><td>DIRECCION</td>
+                </tr>
+                <tr class="active">
+                  <td>NOMBRE</td><td>DIRECCION</td>
+                </tr>
+                <tr class="active">
+                  <td>NOMBRE</td><td>DIRECCION</td>
+                </tr>                                
+            </table>
+            </div>
+      </div>
+      <div class="clearfix visible-sm-block"></div>
+    <meta name="description" content="A Word Cloud plugin for jQuery.">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+    <script src="jquery.awesomeCloud-0.2.min.js"></script>
+      <div id="wordcloud1" class="col-xs-12 col-sm-6  col-md-3" style="height:220px;">
+        <span data-weight="9">enrique</span><span data-weight="27">gripa</span><span data-weight="38">toz</span><span data-weight="43">columna</span><span data-weight="20">hueso</span><span data-weight="19">cabeza</span><span data-weight="26">sida</span>
+      </div>
+    <script>
+      $(document).ready(function(){
+        $("#wordcloud1").awesomeCloud({
+          "size" : {
+            "grid" : 16,
+            "normalize" : false
+          },
+          "options" : {
+            "color" : "random-dark",
+            "rotationRatio" : 0.35,
+            "printMultiplier" : 3,
+            "sort" : "random"
+          },
+          "font" : "'Times New Roman', Times, serif",
+          "shape" : "square"
+        });
+        $("#wordcloud2").awesomeCloud({
+          "size" : {
+            "grid" : 9,
+            "factor" : 1
+          },
+          "options" : {
+            "color" : "random-dark",
+            "rotationRatio" : 0.35
+          },
+          "font" : "'Times New Roman', Times, serif",
+          "shape" : "circle"
+        });
+        $("#wordcloud3").awesomeCloud({
+          "size" : {
+            "grid" : 1,
+            "factor" : 3
+          },
+          "color" : {
+            "background" : "#036"
+          },
+          "options" : {
+            "color" : "random-light",
+            "rotationRatio" : 0.5,
+            "printMultiplier" : 3
+          },
+          "font" : "'Times New Roman', Times, serif",
+          "shape" : "star"
+        });
+      });
+    </script>
+      <div class="clearfix visible-sm-block"></div>
+      <div class="col-xs-12 col-sm-6  col-md6">
+        <div id="container"></div>
+      </div>  
+      <div class="clearfix visible-sm-block"></div>   
+    </div>
+  </div>
+  <footer>
+    <h3>Jose Enrique Vergara Ambriz</h3>
+  </footer>
+  
+<script type="text/javascript" src="moment.min.js"></script>
+    <script type="text/javascript" src="daterangepicker.js"></script>
+    <script type="text/javascript">
+      $('input[name="daterange"]').daterangepicker();
+    </script>
+      
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+
+    <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="https://openlayers.org/en/v3.20.1/css/ol.css" type="text/css">
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://openlayers.org/en/v3.20.1/build/ol.js"></script>
+  <script type="text/javascript">
+    var centro = ol.proj.transform([-99.133535800, 19.301996300], 'EPSG:4326', 'EPSG:3857');
+    var raster = new ol.layer.Tile({
+        source: new ol.source.OSM()
+      });
+      var map = new ol.Map({
+        controls: ol.control.defaults().extend([
+          new ol.control.FullScreen({
+            source: 'fullscreen'
+          })
+        ]),
+        layers: [raster],
+        controls: ol.control.defaults({
+          attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
+            collapsible: false
+          })
+        }),
+        target: document.getElementById('map'),
+        view: new ol.View({
+          center: centro,
+          zoom: 10
+        })
+      });
+      var vector1 = new ol.layer.Vector({
+              source: new ol.source.Vector({
+                url: '../kml/estados.kml',
+                format: new ol.format.KML()
+                //url:'mapa_municipios_de_mexico.geojson',
+                //format: new ol.format.GeoJSON()
+              })
+          });
+      var vector2 = new ol.layer.Vector({
+                source: new ol.source.Vector({
+                  url: '../kml/municipios_df.kml',
+                  format: new ol.format.KML()
+                  //url:'mapa_municipios_de_mexico.geojson',
+                  //format: new ol.format.GeoJSON()
+                })
+          });
+      map.addLayer(vector1);
+      map.addLayer(vector2);
+function lugares(valor)
+{
+        $.ajax({
+          url:'../controladores/afecciones.php',
+          type:'POST',
+          data:'valor='+valor+'&boton=buscar2'
+        }).done(function(resp){
+          var valores=eval(resp);
+          for (var i = 0; i < valores.length; i++) {
+            longitud=valores[i]["longitud"];
+            latitud =valores[i]["latitud"];
+            nombre=valores[i]["nombre"];
+            direccion=valores[i]["direccion"];
+          
+          
+          var centro = ol.proj.transform([longitud, parseFloat(latitud)], 'EPSG:4326', 'EPSG:3857');
+          var iconFeature = new ol.Feature({
+            geometry: new ol.geom.Point(centro),
+            name: nombre,
+            population: 4000,
+            rainfall: 500
+          });
+
+          var iconStyle = new ol.style.Style({
+            image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
+              anchor: [0.5, 46],
+              anchorXUnits: 'fraction',
+              anchorYUnits: 'pixels',
+              src: 'Antiseptic Cream-50.png'
+            }))
+          });
+
+          iconFeature.setStyle(iconStyle);
+
+          var vectorSource = new ol.source.Vector({
+            features: [iconFeature]
+          });
+
+          var vectorLayer = new ol.layer.Vector({
+            source: vectorSource
+          });
+          
+          zoomslider = new ol.control.ZoomSlider();
+          map.addControl(zoomslider);
+
+
+          var element = document.getElementById('popup');
+
+          var popup = new ol.Overlay({
+            element: element,
+            positioning: 'bottom-center',
+            stopEvent: false,
+            offset: [0, -50]
+          });
+          map.addOverlay(popup);
+          map.addLayer(vectorLayer);
+
+        }
+        // display popup on click
+          map.on('click', function(evt) {
+            var feature = map.forEachFeatureAtPixel(evt.pixel,
+                function(feature) {
+                  return feature;
+                });
+            if (feature) {
+              var coordinates = feature.getGeometry().getCoordinates();
+              popup.setPosition(coordinates);
+              $(element).popover({
+                'placement': 'top',
+                'html': true,
+                'content': feature.get('name')
+              });
+              alert(feature.get('name'));////////////////////////////////////////////////////alert
+              //$(element).popover('show');
+            } else {
+              $(element).popover('destroy');
+            }
+          });
+
+          // change mouse cursor when over marker
+          map.on('pointermove', function(e) {
+            if (e.dragging) {
+              $(element).popover('destroy');
+              return;
+            }
+            var pixel = map.getEventPixel(e.originalEvent);
+            var hit = map.hasFeatureAtPixel(pixel);
+            map.getTarget().style.cursor = hit ? 'pointer' : '';
+          });
+          });
+}
+  </script>
+</body>
+</html>

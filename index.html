@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    var properties = new Object();
+    properties.hombre = 11;
+    properties.mujer = 22;
+    var mi_enfermedad = 'gripa';
+
+
+
+    var unidad = new Object();
+    unidad.hospital_1 = 'sin enfermedad';
+    var enfermedad = new Object();enfermedad['mi enfermedaddddddd'] = 'jolassssssssssssss';unidad.hospital_2 = enfermedad;
+    unidad.hospital_3 = "sin enfermedad";
+    unidad.hospital_4 = "sin enfermedad";
+
+    function checar(inp, obj) {
+        for (variable in obj){
+            if(inp == variable){
+                //unidad[inp] = 190;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //var resp = checar('hospital_1', unidad);
+
+
+
+    var myString = JSON.stringify(unidad);
+    //alert(myString);
+    var arr1 = ['HOSPITAL 1','HOSPITAL 1','HOSPITAL 2','HOSPITAL 2','HOSPITAL 3','HOSPITAL 1','HOSPITAL 1'];
+    var arr2 = ['ENFERMEDAD 1','ENFERMEDAD 1','ENFERMEDAD 1','ENFERMEDAD 2','ENFERMEDAD 3','ENFERMEDAD 3','ENFERMEDAD 3'];
+    var arr3 = ['HOMBRE','HOMBRE','HOMBRE','MUJER','MUJER','MUJER','MUJER'];
+    var arr4 = [1,1,1,1,5,1,1];
+
+
+    var final = [];
+    var objFinal = new Object();
+    var objenfermedad = new Object();
+    var objSexo = new Object();
+    arr1.forEach(function (p1) {
+        si = false;
+
+        for (variable in objFinal){
+            if(p1 == variable){
+                if(variable == p1){si = true;objFinal[p1] += arr4[4]; break;}
+            }
+        }
+        if(!si)objFinal[p1] = arr4[4];
+    });
+    arr2.forEach(function (p1) {
+        si = false;
+
+        for (variable in objenfermedad){
+            if(p1 == variable){
+                if(variable == p1){si = true;objenfermedad[p1] += arr4[4]; break;}
+            }
+        }
+        if(!si)objenfermedad[p1] = arr4[4];
+    });
+
+    arr3.forEach(function (p1) {
+        si = false;
+
+        for (variable in objSexo){
+            if(p1 == variable){
+                if(variable == p1){si = true;objSexo[p1] += arr4[4]; break;}
+            }
+        }
+        if(!si)objSexo[p1] = arr4[4];
+    });
+//////////////////////////////////////////////////////////////////
+    var sex;
+    arr2.forEach(function (p1, p2, p3) {
+        si = false;
+        for (variable in objenfermedad){
+            if(p1 == variable){
+                if(variable == p1){
+                    si = true;
+                    sex = new Object();
+                    sex[arr3[p2]] = arr4[p2];
+
+                    //alert(typeof());
+                    objenfermedad[arr2[p2]] = sex;
+                }
+            }
+        }
+        if(!si) {
+            sex = new Object();
+            sex[arr3[p2]] = arr4[p2];
+            objenfermedad[arr2[p2]] = sex;}
+    });
+
+
+    alert(Object.values(objenfermedad));
+    var myString = JSON.stringify(objenfermedad);
+    alert(myString);
+    console.log(myString);
+
+
+</script>
+
+</body>
+</html>

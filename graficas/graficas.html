@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>OL3-ext: style chart</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+
+    <link rel="stylesheet" href="http://openlayers.org/en/master/css/ol.css"/>
+	<script type="text/javascript" src="http://openlayers.org/en/master/build/ol.js"></script>
+	<!-- http://openlayers.org/en/v3.2.0/build/ol.js -->
+	<!-- http://openlayers.org/en/v3.2.0/build/ol-debug.js -->
+
+	<script type="text/javascript" src="chartstyle.js"></script>
+	<script type="text/javascript" src="ol.ordering.js"></script>
+
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<!-- DIV pour la carte -->
+	<div id="map" style="width:600px; height:400px;"></div>
+	<div class="options">
+		<h2>Options:</h2>
+		Chart type: <select id="graph" onchange="doAnimate();">
+			<option value="pie3D">pie3D</option>
+			<option value="pie">pie</option>
+			<option value="donut">donut</option>
+			<option value="bar">bar</option>
+		</select>
+		<br/>
+		Colors scheme:
+		<select id="color" onchange="vector.changed()">
+			<option value="classic">Classic</option>
+			<option value="dark">Dark</option>
+			<option value="pale">Pale</option>
+			<option value="pastel">Pastel</option>
+			<option value="neon">Neon</option>
+			<option value="red,green,blue,magenta">Custom</option>
+		</select>
+		<br/>
+		<button onclick="doAnimate();">Animate!</button>
+	</div>
+	<div id="select" class="info">No selection</div>
+
+	<script type="text/javascript" src="g.js" ></script>	
+</body>
+</html>

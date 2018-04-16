@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+    <title>CDMX</title>
+    <style type="text/css">
+      #tabla {  
+      height: 220px !important;
+      overflow: scroll;
+      }​  
+    </style>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+
+    <link rel="stylesheet" href="https://openlayers.org/en/v3.20.1/css/ol.css" type="text/css">
+
+    <style type="text/css">${demo.css}</style>
+    <script src="../recursos/jquery-3.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="plot.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  </head>
+  <body ONLOAD="start_all()"><!--<body onload="lugares()">-->
+    <header>
+      <div class="container">
+      <h1>SISTEMA DE ANALISIS Y ESTADISTICA</h1>
+      <p class="help-block">CIUDAD DE MÉXICO</p>
+      </div>      
+    </header>
+    <div class="container">
+      <section class=" row ">
+        <div class="col-xs-12 col-sm-8 col-md-12 col-lg-12 " >
+          <div id="exTab1" class="container"> 
+            <ul  class="nav nav-pills">
+            <li class="active">
+            <a  href="#1a" data-toggle="tab">CIUDAD DE MEXICO</a>
+            </li>
+            <li><a href="#2a" data-toggle="tab">SERVICIOS</a>
+            </li>
+            <li><a href="#3a" data-toggle="tab">DEFUCIONES</a>
+            </li>
+            <li><a href="#4a" data-toggle="tab">UNIDADES</a>
+            </li>
+            <li><a href="#5a" data-toggle="tab">NACIMIENTOS</a>
+            </li>
+            </ul>
+            <div class="tab-content clearfix">
+              <div class="tab-pane active row " id="1a">
+                <form class="col-xs-12 col-sm-7 col-md-7">
+                  <div class="form-group">
+                    <label class="sr-only" for="ejemplo_email_2">BUSCAR:</label>
+                    <input type="text"
+                      class="form-control date"
+                      placeholder="¿Qué información estas buscando?">
+                      <span class="help-block">Hospitales, Servicios, Enfermedades, Accidentes, Nacimientos, Defuciones, etc.</span>
+                  </div>
+                  <div class="form-group">
+
+
+                    <label class="sr-only" for="ejemplo_password_2">TODAS LAS CATEGORIAS:</label>
+                    <div id="un">
+                    </div>
+                  </div>
+                </form>
+                <div id="map" class="col-xs-12 col-sm-5 col-md-5 col-lg-5 " style="height: 400PX">
+                </div>
+
+              </div>
+              <div class="tab-pane row" id="2a">
+                <div id="name_servicios" class="col-xs-12 col-sm-12   col-md-12">
+                </div>
+              </div>
+              <div class="tab-pane row" id="3a">          
+                <div class="col-xs-12 col-sm-12   col-md-12">
+                DELEGACIONES
+                </div>
+              </div>
+              <div class="tab-pane row main" id="4a">
+                <div id="name_unidades" class="col-xs-12 col-sm-6 col-md-6">
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+
+                </div>
+              </div>
+              <div class="tab-pane row" id="5a">
+                  <form class="col-xs-12 col-sm-12   col-md-12">
+                  <label>radius size</label>
+                  <input id="radius" type="range" min="1" max="50" step="1" value="5"/>
+                  <label>blur size</label>
+                  <input id="blur" type="range" min="1" max="50" step="1" value="15"/>
+                  </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <DIV class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        
+      </DIV>
+      <section class="row col-xs-12 col-sm-4 col-md-12 col-lg-12" style="width: 100%">      
+        
+        <div class="form-group">
+          <label class="sr-only" for="afec" >ENFERMEDAD:</label>
+          <input type="text"
+          class="form-control date"
+          id="afec" placeholder="AFECCION"
+          onkeyup="lista_afeccion(this.value+','+fecha.value+','+sexo.value)">
+          <div class="form-group">
+            <div class="input-group form-inline">
+            <button class="btn btn-primary " onclick="buscarHospitales('si') ">GRAFICAR</button>
+            <button class="btn btn-info " onclick="mostrartodo()">MOSTRAR</button>
+            </div>          
+          </div>
+          <div class="row col-xs-12 col-sm-12   col-md-12">
+            <div id="tabla"></div>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="col-xs-12 col-sm-12  col-md-12">
+      <div id="container"></div>
+      </div>  
+      <div class="clearfix visible-sm-block"></div> 
+    </div>
+    <footer>
+    <h3>Jose Enrique Vergara Ambriz</h3>
+    </footer>
+    <!-- Fecha -->
+    <script type="text/javascript" src="moment.min.js"></script>
+    <script type="text/javascript" src="daterangepicker.js"></script>
+    <script type="text/javascript">
+    $('input[name="daterange"]').daterangepicker(
+    {
+    locale: {
+    format: 'YYYY-MM-DD'
+    },
+    startDate: '2009-12-26',
+    endDate: '2010-01-01'
+    }, 
+    function(start, end, label) {
+    //alert("A new date range was chosen: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+    });
+    //   $('input[name="daterange"]').daterangepicker();
+    </script>
+    <!-- Termina Fecha -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://openlayers.org/en/v3.20.1/build/ol.js"></script>
+    <script type="text/javascript" src="../recursos/open.js"></script>
+
+  </body>
+</html>
